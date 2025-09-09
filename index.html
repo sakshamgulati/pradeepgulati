@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pradeep Gulati – HR       <p class="section-desc">Result-oriented HR leader integrating People strategy with Business outcomes. I've led end-to-end HR across growth phases while building high-engagement cultures.</p>eader & Coach</title>
+  <meta name="description" content="Pradeep Gulati – CHRO & HR Leader. Talent Management, OD, Culture, L&D, Leadership Coaching." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b1220; --card:#111a2e; --muted:#b8c4e0; --text:#eaf0ff; --accent:#4cc9f0; --brand:#4361ee; --brand-2:#3a0ca3;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:linear-gradient(180deg,#0a0f1f, #0b1220 30%, #0b1220);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;scroll-behavior:smooth}
+    a{color:var(--accent);text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+
+    /* Header */
+    header.hero{position:relative;overflow:hidden}
+    .nav{position:sticky;top:0;z-index:50;background:rgba(11,18,32,.7);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;gap:10px;align-items:center;font-weight:800;letter-spacing:.2px}
+    .brand .dot{width:12px;height:12px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--brand));box-shadow:0 0 30px var(--accent)}
+    .menu{display:flex;gap:18px}
+    .menu a{color:var(--muted);font-weight:600}
+    .menu a:hover{color:var(--text)}
+    .hamburger{display:none;cursor:pointer}
+
+    .hero{padding:64px 0 40px;background:radial-gradient(1200px 400px at 50% -10%, rgba(67,97,238,.35), transparent 60%) }
+    .hero-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:28px;align-items:center}
+    .title{font-size:48px;line-height:1.05;margin:6px 0 12px;font-weight:800}
+    .subtitle{color:var(--muted);font-weight:500;margin-bottom:20px}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+    .btn{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);padding:12px 16px;border-radius:12px;color:var(--text);font-weight:700}
+    .btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));border:none}
+    .stats{display:flex;gap:18px;margin-top:20px;flex-wrap:wrap}
+    .stat{background:var(--card);border:1px solid rgba(255,255,255,.06);padding:14px 16px;border-radius:14px}
+    .stat .num{font-size:22px;font-weight:800}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:18px}
+    .headshot{aspect-ratio:1/1;border-radius:50%;background:linear-gradient(135deg,#111a2e,#0f1630);border:1px solid rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:700}
+    .pill{font-size:12px;color:var(--muted);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);padding:6px 10px;border-radius:999px;display:inline-flex;gap:8px;align-items:center}
+
+    /* Sections */
+    section{padding:56px 0}
+    h2.section-title{font-size:28px;margin:0 0 16px}
+    .section-desc{color:var(--muted);margin-bottom:24px}
+
+    /* Timeline */
+    .timeline{position:relative;margin-left:20px}
+    .timeline:before{content:"";position:absolute;left:12px;top:0;bottom:0;width:2px;background:linear-gradient(var(--brand),transparent)}
+    .t-item{position:relative;display:grid;grid-template-columns:180px 1fr;gap:24px;margin:0 0 22px 0;align-items:start}
+    .t-dot{position:absolute;left:4px;top:8px;width:16px;height:16px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px rgba(76,201,240,.14);z-index:2}
+    .t-time{color:var(--muted);font-weight:700;padding-left:28px;position:relative}
+    .t-card{background:#0f1830;border:1px solid rgba(255,255,255,.08);padding:14px 16px;border-radius:12px}
+    .t-card h3{margin:0 0 6px;font-size:16px}
+    .t-card p{margin:8px 0 0;color:var(--muted)}
+    .t-badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+
+    /* Certificates */
+    .cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+    .cert-card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:16px;transition:transform .3s ease,border-color .3s ease}
+    .cert-card:hover{transform:translateY(-4px);border-color:rgba(76,201,240,.3)}
+    .cert-image{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;background:rgba(255,255,255,.02);cursor:pointer;transition:opacity .3s ease}
+    .cert-image:hover{opacity:0.9}
+    .cert-modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.9);z-index:1000;cursor:pointer}
+    .cert-modal img{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);max-width:95%;max-height:95%;border-radius:12px}
+    .cert-modal.show{display:block}
+
+    /* Skills */
+    .tags{display:flex;gap:10px;flex-wrap:wrap}
+    .tag{padding:8px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);font-weight:600;color:var(--muted)}
+
+    /* Grid */
+    .grid{display:grid;gap:18px}
+    .grid-3{grid-template-columns:repeat(3,1fr)}
+    .grid-2{grid-template-columns:repeat(2,1fr)}
+
+    /* Contact */
+    .contact-grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:32px;align-items:start}
+    .contact-form{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:24px}
+    .contact-info{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:24px}
+    .contact-info-group{margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.06)}
+    .contact-info-group:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}
+    .contact-info h3{margin:0 0 12px 0;font-size:16px;font-weight:700;color:var(--text);text-transform:uppercase;letter-spacing:0.5px}
+    .contact-item{display:flex;align-items:center;gap:12px;margin:8px 0}
+    .contact-item:first-child{margin-top:0}
+    .contact-item:last-child{margin-bottom:0}
+    .contact-info p{margin:0;color:var(--muted);line-height:1.4}
+    .contact-info a{color:var(--accent);text-decoration:none;transition:color .3s ease}
+    .contact-info a:hover{color:var(--text)}
+    .social-link{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:8px 12px;border-radius:8px;transition:all .3s ease}
+    .social-link:hover{background:rgba(76,201,240,.1);border-color:var(--accent);transform:translateY(-1px)}
+    .social-link.whatsapp:hover{background:rgba(37,211,102,.1);border-color:#25d366}
+    .linkedin-icon{width:20px;height:20px;fill:var(--accent)}
+    .whatsapp-icon{width:20px;height:20px;fill:#25d366}
+    form{display:grid;gap:16px}
+    label{display:block;margin-bottom:6px;font-weight:600;color:var(--text)}
+    input,textarea{background:#0f1830;color:var(--text);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:14px 16px;font:inherit;width:100%;transition:border-color .3s ease}
+    input:focus,textarea:focus{outline:none;border-color:var(--accent)}
+    textarea{min-height:120px;resize:vertical}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .disclaimer{color:var(--muted);font-size:12px;margin-top:12px}
+    @media (max-width: 768px){
+      .contact-grid{grid-template-columns:1fr;gap:24px}
+      .form-row{grid-template-columns:1fr}
+    }
+
+    /* Footer */
+    footer{padding:26px 0;color:var(--muted);border-top:1px solid rgba(255,255,255,.06)}
+
+    /* Animations (no external libs) */
+    .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease, transform .6s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+
+    /* Responsive */
+    @media (max-width: 960px){
+      .hero-grid{grid-template-columns:1fr;gap:18px}
+      .t-item{grid-template-columns:140px 1fr;gap:18px}
+      .t-time{padding-left:28px}
+      .grid-3{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+      .menu{display:none}
+      .menu.open{display:flex;flex-direction:column;gap:12px;position:absolute;left:0;right:0;top:56px;background:#0b1220;border-bottom:1px solid rgba(255,255,255,.06);padding:14px 20px}
+      .hamburger{display:block}
+    }
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <div class="container nav-inner">
+      <div class="brand"><span class="dot"></span> Pradeep Gulati</div>
+      <div class="hamburger" id="hamburger" aria-label="Open Menu">☰</div>
+      <nav class="menu" id="menu">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="pill">CHRBP • Leadership Coach • People Practices</div>
+        <h1 class="title">HR Leader & Coach building cultures where people thrive.</h1>
+        <p class="subtitle">25+ years across Media, Telecom & Corporate. Talent Management, OD, L&D and Leadership Development.</p>
+        <div class="cta">
+          <a class="btn primary" href="#contact">Contact Me</a>
+          <a class="btn" href="Pradeep-Gulati-Resume.pdf" download>Download Resume</a>
+          <a class="btn" href="https://www.linkedin.com/in/gulatipradeep/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><div class="num">25+ yrs</div><div class="lbl">Experience</div></div>
+          <div class="stat"><div class="num">3k+</div><div class="lbl">Headcount Led</div></div>
+          <div class="stat"><div class="num">10%+</div><div class="lbl">CSAT Uplift</div></div>
+        </div>
+      </div>
+      <div class="card headshot">
+        Add Headshot Here
+      </div>
+    </div>
+  </header>
+
+  <section id="about" class="reveal">
+    <div class="container">
+      <h2 class="section-title">About</h2>
+      <p class="section-desc">I’m Pradeep Gulati, a result-oriented HR leader who integrates People strategy with Business outcomes. I’ve led end-to-end HR across growth phases—start-up scale, integrations and transformations—while mentoring leaders and building high-engagement cultures.</p>
+      <div class="grid grid-3">
+        <div class="card"><strong>Builder of Systems</strong><br/>Set up HR policies, KRAs, assessment centers & learning frameworks from zero to scale.</div>
+        <div class="card"><strong>Talent Accelerator</strong><br/>Remote-hired & launched TV9 Bangla (0 → 250) during COVID and sustained 24×7 operations.</div>
+        <div class="card"><strong>Coach & Facilitator</strong><br/>Delivered large-scale leadership programs (Railways, Coke, AmEx) and ongoing L&D at Medi Assist.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="reveal">
+    <div class="container">
+      <h2 class="section-title">Experience Timeline</h2>
+      <p class="section-desc">Key roles and impact. Highlights only—details in the downloadable resume.</p>
+      <div class="timeline">
+        <div class="t-item">
+          <span class="t-dot"></span>
+          <div class="t-time">2023 – Present</div>
+          <div class="t-card">
+            <h3>Medi Assist Insurance TPA – Head L&D & OD</h3>
+            <p>Competency framework, assessment centers, leadership pipeline post-BSE listing.</p>
+            <div class="t-badges"><span class="pill">Leadership Pipeline</span><span class="pill">Assessment Centers</span></div>
+          </div>
+        </div>
+        <div class="t-item">
+          <span class="t-dot"></span>
+          <div class="t-time">2022</div>
+          <div class="t-card">
+            <h3>Go First – Regional HR Head (North, East, NE)</h3>
+            <p>Led HR across Airport Services, Engineering & Security; managed operations through turbulence.</p>
+            <div class="t-badges"><span class="pill">Aviation HR</span><span class="pill">Multi-Region</span></div>
+          </div>
+        </div>
+        <div class="t-item">
+          <span class="t-dot"></span>
+          <div class="t-time">2019 – 2022</div>
+          <div class="t-card">
+            <h3>TV9 Group – FT HR Consultant / Regional HRBP</h3>
+            <p>Launched TV9 Bangla; designed SMART KRAs; enabled remote-first operations during COVID.</p>
+            <div class="t-badges"><span class="pill">Remote Hiring</span><span class="pill">KRA Design</span></div>
+          </div>
+        </div>
+        <div class="t-item">
+          <span class="t-dot"></span>
+          <div class="t-time">2018 – 2019</div>
+          <div class="t-card">
+            <h3>Analog Media (Tiranga TV) – Head HR</h3>
+            <p>Set up HR & Admin; managed dignified employee exits for 200+ staff during business closure.</p>
+            <div class="t-badges"><span class="pill">Change Mgmt</span><span class="pill">Employee Relations</span></div>
+          </div>
+        </div>
+        <div class="t-item">
+          <span class="t-dot"></span>
+          <div class="t-time">2015 – 2018</div>
+          <div class="t-card">
+            <h3>Breakthru Consulting – HR Consultant</h3>
+            <p>Consulted across Pharma, EdTech, Healthcare, BPO; delivered leadership programs nationwide.</p>
+            <div class="t-badges"><span class="pill">Consulting</span><span class="pill">PMS Design</span></div>
+          </div>
+        </div>
+        <div class="t-item">
+          <span class="t-dot"></span>
+          <div class="t-time">2014 – 2015</div>
+          <div class="t-card">
+            <h3>Sahara India Media – Head HR</h3>
+            <p>Owned HR for 3500+ across TV & Print; led 22 HR professionals in unionized environment.</p>
+            <div class="t-badges"><span class="pill">Large Scale</span><span class="pill">Unionized Env</span></div>
+          </div>
+        </div>
+        <div class="t-item">
+          <span class="t-dot"></span>
+          <div class="t-time">2010 – 2012</div>
+          <div class="t-card">
+            <h3>Zee News Ltd – Head HR (Sr. VP)</h3>
+            <p>Designed HR policies; launched Mobile HR; introduced leadership curriculum.</p>
+            <div class="t-badges"><span class="pill">Policy Design</span><span class="pill">Leadership Dev</span></div>
+          </div>
+        </div>
+        <div class="t-item">
+          <span class="t-dot"></span>
+          <div class="t-time">2008 – 2010</div>
+          <div class="t-card">
+            <h3>Reliance Communications – Hub HR Head</h3>
+            <p>Delivered HR & business outcomes for GSM/CDMA; 2500+ workforce across Delhi Hub and UP(W)/Uttaranchal.</p>
+            <div class="t-badges"><span class="pill">Ops HR</span><span class="pill">Performance</span></div>
+          </div>
+        </div>
+        <div class="t-item">
+          <span class="t-dot"></span>
+          <div class="t-time">2004 – 2008</div>
+          <div class="t-card">
+            <h3>Bharti Airtel – Talent Acquisition / L&D / Talent Mgmt</h3>
+            <p>Scaled hiring & L&D; migrated call center; pioneered training videos lifting CSAT ~10% in a quarter.</p>
+            <div class="t-badges"><span class="pill">TA</span><span class="pill">L&D</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="achievements" class="reveal">
+    <div class="container">
+      <h2 class="section-title">Selected Achievements</h2>
+      <div class="grid grid-3">
+        <div class="card"><strong>NIIT Excellence Award</strong><br/><span class="section-desc">Recognized for excellence in L&D (1997).</span></div>
+        <div class="card"><strong>Airtel Best Seller Trophy</strong><br/><span class="section-desc">Highest FWP sales while in HR—unique cross-functional result.</span></div>
+        <div class="card"><strong>Mobile HR @ Zee</strong><br/><span class="section-desc">First-in-industry initiative improving ESAT and access.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="certificates" class="reveal">
+    <div class="container">
+      <h2 class="section-title">Certifications</h2>
+      <p class="section-desc">Professional certifications and achievements that demonstrate continuous learning and expertise.</p>
+      <div class="cert-grid">
+        <div class="cert-card">
+          <img src="Pradeep Gulati_cert1.jpg" alt="Professional Certificate 1" class="cert-image" onclick="openModal(this.src, 'Professional Certificate 1')">
+        </div>
+        <div class="cert-card">
+          <img src="Pradeep Gulati_cert2.jpg" alt="Professional Certificate 2" class="cert-image" onclick="openModal(this.src, 'Professional Certificate 2')">
+        </div>
+        <div class="cert-card">
+          <img src="Pradeep Gulati_cert3.jpg" alt="Professional Certificate 3" class="cert-image" onclick="openModal(this.src, 'Professional Certificate 3')">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="reveal">
+    <div class="container">
+      <h2 class="section-title">Skills & Focus</h2>
+      <div class="tags">
+        <span class="tag">Talent Management</span>
+        <span class="tag">Talent Acquisition</span>
+        <span class="tag">Organization Development</span>
+        <span class="tag">Leadership Coaching</span>
+        <span class="tag">Employee Engagement</span>
+        <span class="tag">Performance Management</span>
+        <span class="tag">HR Policy Design</span>
+        <span class="tag">Assessment Centers</span>
+        <span class="tag">KRA/KPI Frameworks</span>
+        <span class="tag">Learning Strategy</span>
+      </div>
+    </div>
+  </section>
+
+    <section id="contact" class="reveal">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-desc">I'd love to hear from you. Use the form below and I'll respond promptly.</p>
+      <div class="contact-grid">
+        <div class="contact-form">
+          <form action="https://formsubmit.co/pradeepg2410@gmail.com" method="POST">
+            <!-- FormSubmit settings -->
+            <input type="hidden" name="_subject" value="New inquiry from pradeepgulati.com" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+
+            <div class="form-row">
+              <div>
+                <label for="name">Full Name</label>
+                <input id="name" name="name" type="text" placeholder="Your name" required />
+              </div>
+              <div>
+                <label for="email">Email Address</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" required />
+              </div>
+            </div>
+            <div>
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="How can I help you?" required></textarea>
+            </div>
+            <button class="btn primary" type="submit">Send Message</button>
+            <div class="disclaimer">This form uses FormSubmit. By sending, you agree to be contacted back via email.</div>
+          </form>
+        </div>
+        
+        <div class="contact-info">
+          <div class="contact-info-group">
+            <h3>Get in Touch</h3>
+            <div class="contact-item">
+              <p><strong>Email:</strong> <a href="mailto:pradeepg2410@gmail.com">pradeepg2410@gmail.com</a></p>
+            </div>
+            <div class="contact-item">
+              <p><strong>Phone:</strong> +91 9311581427</p>
+            </div>
+            <div class="contact-item">
+              <a href="https://wa.me/919311581427" target="_blank" rel="noopener" class="social-link whatsapp">
+                <svg class="whatsapp-icon" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                </svg>
+                WhatsApp Chat
+              </a>
+            </div>
+            <div class="contact-item">
+              <a href="https://www.linkedin.com/in/gulatipradeep/" target="_blank" rel="noopener" class="social-link">
+                <svg class="linkedin-icon" viewBox="0 0 24 24">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+                LinkedIn Profile
+              </a>
+            </div>
+          </div>
+          
+          <div class="contact-info-group">
+            <h3>Location</h3>
+            <div class="contact-item">
+              <p>New Delhi, India</p>
+            </div>
+          </div>
+          
+          <div class="contact-info-group">
+            <h3>Resume</h3>
+            <div class="contact-item">
+              <a class="btn" href="Pradeep-Gulati-Resume.pdf" download>Download PDF Resume</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">© <span id="year"></span> Pradeep Gulati • All rights reserved.</div>
+  </footer>
+
+  <!-- Certificate Modal -->
+  <div id="certModal" class="cert-modal" onclick="closeModal()">
+    <img id="modalImage" src="" alt="">
+  </div>
+
+  <script>
+    // Mobile menu toggle
+    const ham = document.getElementById('hamburger');
+    const menu = document.getElementById('menu');
+    ham.addEventListener('click', ()=> menu.classList.toggle('open'));
+
+    // Reveal on scroll
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target);} });
+    },{threshold:0.12});
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+    // Certificate modal functions
+    function openModal(src, alt) {
+      const modal = document.getElementById('certModal');
+      const modalImg = document.getElementById('modalImage');
+      modal.classList.add('show');
+      modalImg.src = src;
+      modalImg.alt = alt;
+      document.body.style.overflow = 'hidden'; // Prevent scrolling
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('certModal');
+      modal.classList.remove('show');
+      document.body.style.overflow = 'auto'; // Re-enable scrolling
+    }
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeModal();
+      }
+    });
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
