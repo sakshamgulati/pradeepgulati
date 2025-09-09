@@ -27,17 +27,16 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      # If your site is already static at repo root:
-      # - name: Upload artifact
-      #   uses: actions/upload-pages-artifact@v3
-      #   with:
-      #     path: .
+      - name: (Optional) Add .nojekyll
+        run: echo > .nojekyll
 
-      # If your static build output lands in /dist (or change to your folder)
+      - name: Verify files
+        run: ls -la
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: .
 
       - name: Deploy to GitHub Pages
         id: deployment
